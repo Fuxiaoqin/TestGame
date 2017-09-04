@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en" style="height: auto; overflow: auto; min-height:100%;">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1,  minimum-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+    <meta name="apple-mobile-web-app-title" content=""/>
+    <meta name="apple-touch-fullscreen" content="YES" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="HandheldFriendly" content="true" />
+    <meta http-equiv="x-rim-auto-match" content="none" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta itemprop="name" content="" id="qqShareContent">
+    <meta itemprop="description" content="" id="qqShareDes">
+    <meta itemprop="image" content="" id="qqShareImg">
+    <title>挑战美食赢999元现金红包</title>
+    <link rel="stylesheet" href="css/reusable.css">   
+    <link rel="stylesheet" href="css/style.css">   
+</head>
+<body>
+    <div class="index_warp">
+        <div class="page1">
+            <div class="header">
+                <div class="title"></div>
+            </div>  
+            <div class="userInfo">
+                <div>
+                    <h1></h1> 
+                    <img src="images/header.png" alt="">
+                </div>
+                <p>好享瘦达人</p>
+            </div>
+            <div class="section">
+                <div class="progress">
+                        <div class="download"></div>
+                </div>
+                <p class="innerText">挑战赢999元现金红包，您准备好了吗?</p>
+            </div>
+            <div class="footer">
+                好享瘦 移动专+减脂平台
+            </div>
+        </div>
+        <div class="d_foot" >
+            <span class="colse"></span>
+            <div class="d_foot_bg"></div>
+            <div class="d_foot_main">
+                <div class="left"></div>
+                <div class="text">好享瘦,专业瘦</div>
+                <a href="">下载APP</a>
+            </div>
+        </div>
+        <p class="copyright">※活动最终解释权归好享瘦APP所有 本活动与苹果公司无关</p>
+    </div>
+    <!-- 活动结束横幅 -->
+    <div class="page_1_foot">活动已结束</div>
+    <!-- 页面加载完之前的gif -->
+    <div class="stressing" id="stressing"><span></span></div>
+</body>
+<script src="js/jquery.min.js"></script>
+<script src="js/jweixin-1.0.0.js"></script>
+<script src="js/common.js"></script>
+<script src="js/reusableJs.js"></script>
+<script type="text/javascript">preLoading('stressing');</script>
+<script>
+    init();
+    getclientH('.index_warp');
+    //获取图像昵称接口
+    $.getJSON(_ACTHOST+'/tenSecond/Mod/ubi?callback=?',json,function(data){
+        if(data.code==200){
+            $('.userInfo img').attr('src',data.data.head_img);
+            $('.userInfo p').html(data.data.nickname);
+        }
+    })
+    var timer=null,count=0;
+    timer=setInterval(function(){
+        if(count>169){
+            clearInterval(timer);
+            timer=null;
+            window.location.href='https://act.hxsapp.com/html/tenSecondsTest/test.html?'+window.location.href.split('?')[1];
+        }
+        count++;
+        $('.download').css('width',count/10+'rem');
+    },30);
+</script>
+</html>
