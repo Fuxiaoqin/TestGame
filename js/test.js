@@ -13,7 +13,7 @@ var testAct={
             //     } 
             // }
             // me.testBindA(data.code, 0, data.msg);
-            me.testBindA(200, 0, data.msg);
+            me.testBindA(200, 0);
         })
     },
     getParticipant:function(){
@@ -25,7 +25,7 @@ var testAct={
         $('.testBtn').on('click',function(){
             $('.d_foot').hide();
             $('.testBtn').css({'animation':''});
-            if( $_GET('shareType') == 1 || ( !( (token && token.length < 10 || (locationType != -1 && !token)) ) ) ){
+            // if( $_GET('shareType') == 1 || ( !( (token && token.length < 10 || (locationType != -1 && !token)) ) ) ){
                 $('.frame').css({'animation':'fadeOutUp 1s 1 linear'}).hide(1050);
                 // if(code!=200){
                 //     toastTip('.toast_tip',msg,2500);
@@ -63,15 +63,15 @@ var testAct={
                         $('.testBtn').off('click');
                     },1000); 
                 // } 
-            }
-            else{ 
-                myUserAgent(function(Version){
-                    if(Version && Version >= 2.5){
-                        window.location.href='https://hxsapp_showloginpage';
-                        return false;
-                    }
-                })
-            }
+            // }
+            // else{ 
+            //     myUserAgent(function(Version){
+            //         if(Version && Version >= 2.5){
+            //             window.location.href='https://hxsapp_showloginpage';
+            //             return false;
+            //         }
+            //     })
+            // }
         })
     },
     imgBindA:function(){
