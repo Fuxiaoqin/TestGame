@@ -5,7 +5,7 @@ var testAct={
     getActData:function(){
         var me = this;
         $.getJSON(_ACTHOST + '/tenSecond/Mod/actInfo?callback=?', json, function(data){
-            shareFun(data.data);
+            // shareFun(data.data);
             me.randomImg()
             // if(data.code == 200){//活动未开始、不存在、参数异常.
             //     if(data.data.state == -1){
