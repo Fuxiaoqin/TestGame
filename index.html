@@ -39,7 +39,7 @@
                 <p class="innerText">挑战赢999元现金红包，您准备好了吗?</p>
             </div>
             <div class="footer">
-                好享瘦 移动专+减脂平台
+                XXX 移动专+减脂平台
             </div>
         </div>
         <div class="d_foot" >
@@ -47,11 +47,11 @@
             <div class="d_foot_bg"></div>
             <div class="d_foot_main">
                 <div class="left"></div>
-                <div class="text">好享瘦,专业瘦</div>
+                <div class="text">XXX,专业瘦</div>
                 <a href="">下载APP</a>
             </div>
         </div>
-        <p class="copyright">※活动最终解释权归好享瘦APP所有 本活动与苹果公司无关</p>
+        <p class="copyright">※活动最终解释权归XXXAPP所有 本活动与苹果公司无关</p>
     </div>
     <!-- 活动结束横幅 -->
     <div class="page_1_foot">活动已结束</div>
@@ -67,21 +67,22 @@
     init();
     getclientH('.index_warp');
     //获取图像昵称接口
-    $.getJSON(_ACTHOST+'/tenSecond/Mod/ubi?callback=?',json,function(data){
-        if(data.code==200){
-            $('.userInfo img').attr('src',data.data.head_img);
+    $.getJSON(_ACTHOST + '/tenSecond/Mod/ubi?callback=?', json, function(data){
+        if(data.code == 200){
+            $('.userInfo img').attr('src', data.data.head_img);
             $('.userInfo p').html(data.data.nickname);
         }
     })
-    var timer=null,count=0;
-    timer=setInterval(function(){
-        if(count>169){
+    var timer = null,
+        count = 0;
+    timer = setInterval(function(){
+        if(count > 169){
             clearInterval(timer);
-            timer=null;
-            window.location.href='https://act.hxsapp.com/html/tenSecondsTest/test.html?'+window.location.href.split('?')[1];
+            timer = null;
+            window.location.href = 'https://act.hxsapp.com/html/tenSecondsTest/test.html?' + window.location.href.split('?')[1];
         }
         count++;
-        $('.download').css('width',count/10+'rem');
+        $('.download').css('width', count/10 + 'rem');
     },30);
 </script>
 </html>
