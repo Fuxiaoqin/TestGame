@@ -1,30 +1,30 @@
 var testAct={
-    timer:null,
-    checked:false,
-    score:100,
+    timer: null,
+    checked: false,
+    score: 100,
     getActData:function(){
-        var me=this;
-        $.getJSON(_ACTHOST+'/tenSecond/Mod/actInfo?callback=?',json,function(data){
+        var me = this;
+        $.getJSON(_ACTHOST + '/tenSecond/Mod/actInfo?callback=?', json, function(data){
             shareFun(data.data);
             me.randomImg()
-            if(data.code==200){//活动未开始、不存在、参数异常.
-                if(data.data.state==-1){
-                    $('.page_1_foot').css('display','block'); 
+            if(data.code == 200){//活动未开始、不存在、参数异常.
+                if(data.data.state == -1){
+                    $('.page_1_foot').css('display', 'block'); 
                 } 
             }
-            me.testBindA(data.code,0,data.msg);
+            me.testBindA(data.code, 0, data.msg);
         })
     },
     getParticipant:function(){
         getParticipant('/tenSecond/Mod/pv',json,'.peopleCount');
     },
-    testBindA:function(code,n,msg){
+    testBindA:function(code, n, msg){
         var me=this;
         var token = $_GET('sess_token');
         $('.testBtn').on('click',function(){
             $('.d_foot').hide();
             $('.testBtn').css({'animation':''});
-            if($_GET('shareType')==1||(!((token && token.length < 10 || (locationType != -1 && !token))))){
+            if( $_GET('shareType') == 1 || ( !( (token && token.length < 10 || (locationType != -1 && !token)) ) ) ){
                 $('.frame').css({'animation':'fadeOutUp 1s 1 linear'}).hide(1050);
                 if(code!=200){
                     toastTip('.toast_tip',msg,2500);
@@ -75,7 +75,7 @@ var testAct={
     },
     imgBindA:function(){
         var me=this;
-        $('.page2 .section').on('touchstart',function(e){
+        $('.page2 .section').on('click',function(e){
             var target=e.target;
             if(target.nodeName=='IMG'){
                 if(!$(target.parentNode).hasClass('checked')){

@@ -1,7 +1,7 @@
 # [Demo演示 :blush:](https://fuxiaoqin.github.io/TestGame/index.html)<br>
 ↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑
  
-[![image](https://github.com/Fuxiaoqin/TestGame/blob/master/images/banner.jpg?raw=true "点我演示效果")](https://fuxiaoqin.github.io/TestGame/index.html)[![image](https://github.com/Fuxiaoqin/TestGame/blob/master/images/banner2.jpg?raw=true "点我演示效果")](https://fuxiaoqin.github.io/TestGame/index.html)
+[![image](https://github.com/Fuxiaoqin/TestGame/blob/master/images/banner.jpg?raw=true "点我演示效果")](https://fuxiaoqin.github.io/TestGame/index.html) [![image](https://github.com/Fuxiaoqin/TestGame/blob/master/images/banner2.jpg?raw=true "点我演示效果")](https://fuxiaoqin.github.io/TestGame/index.html)
 
 ## 开发说明：
 ### 一、使用技术栈
@@ -25,7 +25,7 @@
     2.传递参数：链接上携带参数（需同时编码）
 #### 二、难点及核心技术：
     1.需要同时给30个对象绑定动画时，可利用冒泡原理给其共用父级绑定一次即可，再判定目标对象是否为所需要的对象
-    2.利用分享次数控制抽奖次数时：需在首次请求接口时传递初始化为0的分享计数器，后台将count值存入缓存数组，每次分享之后将其加1再push进数组
+    2.利用分享次数控制抽奖次数时：需在首次请求接口时传递初始化为0的分享计数器，后台将count值存入缓存数组，<br>每次分享之后将其加1再push进数组
     3.各种aimiate动画使用前后需清除原动画
 ## 联系方式
 - `Email`：xiaoqinfu@sina.com
