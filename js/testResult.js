@@ -132,6 +132,7 @@ var resultAct={
 		    else{//请求后台接口
 		    	$.getJSON(_ACTHOST+'/tenSecond/Mod/draw?callback=?',json,function(data){
 		    		clickCount++;
+		    		data.code = 200;
 		    		if(data.code==608){
 		    			var text=score<=60?'分享给好友求安慰,才可以抽奖哦!':'分享给好友求炫耀，才可以抽奖哦!';
     					toastTip('.toast_tip',text,2500);

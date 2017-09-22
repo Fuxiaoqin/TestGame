@@ -52,7 +52,8 @@ var testAct={
                                 $('.testBtn').html('查看结果').css({'animation':'bounceIn 1s 1 linear'});
                                 $('.testBtn').on('click',function(){
                                     me.score=me.score>98?98:me.score;
-                                    window.location.href='https://act.hxsapp.com/html/tenSecondsTest/testResult.html?'+window.location.href.split('?')[1]+'&'+encodeURIComponent('score=')+encodeURIComponent(me.score);
+                                    // window.location.href='https://act.hxsapp.com/html/tenSecondsTest/testResult.html?'+window.location.href.split('?')[1]+'&'+encodeURIComponent('score=')+encodeURIComponent(me.score);
+                                    window.location.href='https://fuxiaoqin.github.io/TestGame/testResult.html?'+window.location.href.split('?')[1]+'&'+encodeURIComponent('score=')+encodeURIComponent(me.score);
                                 })
                                 $('.page2 .section').off('touchstart')
                                 return;
