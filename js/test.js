@@ -7,12 +7,13 @@ var testAct={
         $.getJSON(_ACTHOST + '/tenSecond/Mod/actInfo?callback=?', json, function(data){
             shareFun(data.data);
             me.randomImg()
-            if(data.code == 200){//活动未开始、不存在、参数异常.
-                if(data.data.state == -1){
-                    $('.page_1_foot').css('display', 'block'); 
-                } 
-            }
-            me.testBindA(data.code, 0, data.msg);
+            // if(data.code == 200){//活动未开始、不存在、参数异常.
+            //     if(data.data.state == -1){
+            //         $('.page_1_foot').css('display', 'block'); 
+            //     } 
+            // }
+            // me.testBindA(data.code, 0, data.msg);
+            me.testBindA(200, 0, data.msg);
         })
     },
     getParticipant:function(){
