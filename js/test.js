@@ -26,10 +26,10 @@ var testAct={
             $('.testBtn').css({'animation':''});
             if( $_GET('shareType') == 1 || ( !( (token && token.length < 10 || (locationType != -1 && !token)) ) ) ){
                 $('.frame').css({'animation':'fadeOutUp 1s 1 linear'}).hide(1050);
-                if(code!=200){
-                    toastTip('.toast_tip',msg,2500);
-                    return;
-                }else{
+                // if(code!=200){
+                //     toastTip('.toast_tip',msg,2500);
+                //     return;
+                // }else{
                     if(n==1){me.randomImg()}
                     me.imgBindA();
                     var time=10;
@@ -61,7 +61,7 @@ var testAct={
                         $('.time p').html(time+'"');
                         $('.testBtn').off('click');
                     },1000); 
-                } 
+                // } 
             }
             else{ 
                 myUserAgent(function(Version){
